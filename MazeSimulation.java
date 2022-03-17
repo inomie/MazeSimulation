@@ -134,6 +134,9 @@ public class MazeSimulation {
             this.setBackground(Color.GREEN);
         }
 
+        public void setStart() {
+            this.setBackground(Color.YELLOW);
+        }
     }
 
     /**
@@ -201,6 +204,9 @@ public class MazeSimulation {
                     displayPanel.setGoal();
                 } else {
                     displayPanel.setEmpty();
+                }
+                if(maze.getStartPosition().equals(new Position(j, i))) {
+                    displayPanel.setStart();
                 }
 
                 mazePanel.add(displayPanel);
