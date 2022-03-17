@@ -280,6 +280,8 @@ public class MazeSimulation {
 
         @Override
         public void actionPerformed(ActionEvent event) {
+            /* Use multi thread so the program will not crash if the user
+            *  starts multi robots at once */
             new Thread(() -> {
                 try {
                     switch (type) {
